@@ -71,10 +71,31 @@ public class UserController {
 	
 	@PostMapping(value="getUser")
 	@ResponseBody
+	//Optional이 null을 허용하지 않는 컨테이너 역할을 하며 객체가 존재하지 않을 때 예외를 발생시키지 않고 그 상황에 대해 대처하는 기능 제공
+	//그래서 UserDTO 객체가 없을 경우에도 예외를 발생시키지 않는다.  이 경우에는 Optional
 	public Optional<UserDTO> getUser(@RequestParam String id) {
 		Optional<UserDTO> userDTO = userService.getUser(id);
 		return userDTO;
 	}
+	
+	@PostMapping("update")
+	@ResponseBody
+	public void update(@ModelAttribute UserDTO userDTO) {
+		userService.update(userDTO);
+	}
+	
+	@GetMapping("deleteForm")
+	public String deleteForm() {
+		return "user/deleteForm";
+	}
+	
+	
+	@PostMapping("delete")
+	@ResponseBody
+	public void delete(@RequestParam String id) {
+		userService.delete(id);
+	}
+	
 	
 	
 

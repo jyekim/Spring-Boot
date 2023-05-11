@@ -12,7 +12,7 @@
 	<a href="/user/writeForm">등록</a><br/>
 	<a href="/user/list">목록</a><br/>
 	<a href="/user/updateForm">수정</a><br/>
-	<a href="">삭제</a><br/>
+	<a href="/user/deleteForm">삭제</a><br/>
 </h4>
 </body>
 </html>

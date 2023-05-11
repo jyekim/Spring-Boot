@@ -30,6 +30,7 @@ $(function(){
 	 				
 	 				$('#name').val(data.name);
 	 				$('#id').val(data.id);
+	 				$('#pwd').val(data.pwd);
 	 			}
 	 		},
 	 		error: function(err) {
@@ -77,11 +78,11 @@ $('#updateBtn').click(function(){
 	}else{
 		$.ajax({
 			type: 'post',
-			url:'/chapter06_SpringWebMaven/user/update',
+			url:'/user/update',
 			data: $('#updateForm').serialize(),
 			success: function(){
 				alert("회원정보를 수정하였습니다.");
-				location.href='/chapter06_SpringWebMaven/user/list';	
+				location.href='/user/list';	
 			},
 			error: function(err){
 				console.log(err);

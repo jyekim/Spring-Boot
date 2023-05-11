@@ -32,7 +32,7 @@
 		</tr>
 			<tr>
 			<th width="70">비밀번호</th>
-			<td><input type="password" name="pwd" id="pwd">
+			<td><input type="password" name="pwd" >
 			<div id="pwdDiv"></div>
 			</td>
 		</tr>
